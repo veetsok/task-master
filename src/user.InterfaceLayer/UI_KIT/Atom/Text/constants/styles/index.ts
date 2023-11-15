@@ -1,0 +1,6 @@
+import { css } from "styled-components";
+import FontsEnum from "../../../../../constants/fonts";
+
+export const commonTextStyles = css`
+  font-family: ${FontsEnum.AvenirNextCyr};
+`;
