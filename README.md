@@ -61,7 +61,7 @@ git clone
 
 Navigate to the frontend directory and run npm install followed by npm run dev
 ```sh
-$ npm install
+npm install
 ```
 ```sh
 npm run dev
