@@ -1,27 +1,71 @@
-# React + TypeScript + Vite
+# MasterTask
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Welcome to MasterTask, a Single Page Application (SPA) Todo App that serves as a comprehensive web solution for efficient project and to-do list management. This project is built using the MERN stack (MongoDB, Express, ReactJS, NodeJS) alongside TypeScript, Redux, and Vite, showcasing a powerful and scalable approach to modern web development.
 
-Currently, two official plugins are available:
+## Table Of Content
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Description Technologies](#description)
+- [Technologies](#technologies)
+- [Installation](#installation)
 
-## Expanding the ESLint configuration
+## Description
+## Installation
+TypeScript Everywhere: The entire codebase is fully typed, ensuring a robust and error-resistant development experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+MERN Stack Backend: Utilizing MongoDB, Express, ReactJS, and NodeJS, the backend provides a reliable and scalable foundation for data storage and retrieval
 
-- Configure the top-level `parserOptions` property like this:
+CRUD operations for projects (Create, Read, Update, Delete)
+CRUD operations for tasks (Create, Read, Update, Delete)
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+Authentication: Users can register and log in securely, ensuring a personalized experience with saved projects and tasks.
+
+Mobile-Friendly Design: The app includes a responsive design with a dedicated mobile version. The project page features a slider for convenient navigation, and tasks support drag-and-drop functionality
+
+Drag and Drop Functionality: Users can easily manage their tasks with the intuitive drag-and-drop feature.
+
+Custom Design: The application features a unique design to provide an aesthetically pleasing and user-friendly experience.
+
+## Technologies
+
+### Frontend:
+
+  - ReactJS with Vite (for development)
+  - Redux for state management
+  - TypeScript
+  - Styled-components for styling
+  - Axios for API communication
+  - React Router DOM for navigation
+  - React Beautiful DND for drag-and-drop functionality
+  - Axios for handling HTTP requests
+  - Web Vitals for performance monitorin
+  
+### Backend:
+
+  - Node.js
+  - Express.js for server-side logic
+  - MongoDB for data storage
+  - Mongoose for MongoDB object modeling
+  - JWT for secure authentication
+  - Bcrypt for password hashing
+  - Joi for request validation
+  - Cors for handling cross-origin resource sharing
+  - Note: The backend code is not visible for security reasons.
+
+## Installation
+
+To run the application locally:
+Clone the repository : 
+```sh
+git clone
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Navigate to the frontend directory and run npm install followed by npm run dev
+```sh
+$ npm install
+```
+```sh
+npm run dev
+```
+-Visit: [MasterTask](https://master-task.netlify.app) to access the deployed application.
+
+Thank you for visiting MasterTask! For any inquiries or collaboration opportunities, feel free to contact me. Connect with me on email at ivankosteev-it@yandex.ru or [Telegram](https://t.me/ivan_veetsok)
