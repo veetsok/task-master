@@ -30,9 +30,24 @@ export const DefaultSvg = styled.div<Image>`
 
 export const BackgroundImage = styled.div<Image>`
   background: ${(props) =>
-    props.background ? `url(${props.background})  50% / cover no-repeat;` : "none"};
+    props.background ? `no-repeat center/100% url(${props.background})` : "none"};
   width: 100%;
+  margin: 0 auto;
   height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 `;
 
 export const Image = styled.div<Image>``;

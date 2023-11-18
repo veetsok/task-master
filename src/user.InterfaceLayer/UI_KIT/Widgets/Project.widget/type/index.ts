@@ -1,3 +1,5 @@
+import { CSSProperties } from "styled-components";
+
 export interface ProjectWidgetProps {
   author?: string;
   date?: string;
@@ -7,4 +9,5 @@ export interface ProjectWidgetProps {
   handleDeleteProject?: () => void;
   onClick?: () => void;
   isLoading?: boolean;
+  custom?: CSSProperties;
 }

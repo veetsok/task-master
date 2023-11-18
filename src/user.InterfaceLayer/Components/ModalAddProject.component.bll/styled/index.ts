@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Colors from "../../../constants/colors";
+import fade from "../../ModalAddTodo.component.bll/styled/animation";
 
 export const ModalWrapper = styled.div`
   position: fixed;
@@ -11,9 +12,10 @@ export const ModalWrapper = styled.div`
 `;
 
 export const Container = styled.div`
+  margin: 0 20px;
   max-height: calc(100vh - 48px);
   position: relative;
-  animation: Modal_fade-down__uPWJY 0.3s ease;
+  animation: ${fade} 0.3s ease;
   width: calc(100% - 48px);
   background: ${Colors.BG_WIDGET};
   border-radius: 10px;

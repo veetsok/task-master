@@ -2,19 +2,18 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { signIn } from "../../../../business.InterfaceLayer/store/actions/authActions";
 import * as ST from "../style/index";
-import { useNavigate } from "react-router-dom";
 import Button from "../../../UI_KIT/Atom/Button";
 import Input from "../../../UI_KIT/Atom/Input";
 import { RootState } from "../../../../business.InterfaceLayer/store/reducers/rootReducer";
 import ButtonEnum from "../../../UI_KIT/Atom/Button/enum";
 import { InputTypeEnum } from "../../../UI_KIT/Atom/Input/enum";
-
+import { Navigate } from "react-router-dom";
 
 interface SignInPageProps {}
 
 const SignInPage: React.FC<SignInPageProps> = () => {
-  const navigate = useNavigate();
   const auth = useSelector((state: RootState) => state.auth);
+
   const dispatch = useDispatch();
 
   const [creds, setCreds] = useState({
@@ -30,10 +29,7 @@ const SignInPage: React.FC<SignInPageProps> = () => {
     setCreds({ email: "", password: "" });
   };
 
-  if (auth._id) {
-    navigate("/");
-    return null;
-  }
+  if (auth._id) return <Navigate to="/" />;
 
   return (
     <ST.Container>

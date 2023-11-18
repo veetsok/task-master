@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { signUp } from "../../../../business.InterfaceLayer/store/actions/authActions";
 import * as ST from "../style/index";
@@ -9,11 +9,9 @@ import { RootState } from "../../../../business.InterfaceLayer/store/reducers/ro
 import ButtonEnum from "../../../UI_KIT/Atom/Button/enum";
 import { InputTypeEnum } from "../../../UI_KIT/Atom/Input/enum";
 
-
 interface SignUpPageProps {}
 
 const SignUpPage: React.FC<SignUpPageProps> = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const auth = useSelector((state: RootState) => state.auth);
 
@@ -35,10 +33,7 @@ const SignUpPage: React.FC<SignUpPageProps> = () => {
     });
   };
 
-  if (auth._id) {
-    navigate("/");
-    return null;
-  }
+  if (auth._id) return <Navigate to="/" />;
 
   return (
     <ST.Container>

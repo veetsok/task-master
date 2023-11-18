@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 1240px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 42px 0;
   & h2 {
@@ -35,6 +35,15 @@ export const TextBlock = styled.div`
   & h3 {
     margin-top: 30px;
   }
+  @media (max-width: 769px) {
+    h2 {
+      font-size: 34px;
+      max-height: 130px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+  }
 `;
 
 export const ResetContainer = styled.div`
@@ -43,6 +52,14 @@ export const ResetContainer = styled.div`
 
 export const TodosList = styled.div`
   display: flex;
-  margin: 40px -10px 0 -10px;
+  margin-top: 40px;
+  width: 100%;
   justify-content: space-between;
+  @media (max-width: 769px) {
+    margin: 20px auto;
+    overflow-x: overlay;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+  }
 `;

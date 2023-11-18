@@ -16,6 +16,11 @@ export const Container = styled.div`
   & h5 {
     font-weight: 600;
     max-height: 44px;
+    @media (max-width: 769px) {
+      & h5 {
+        font-size: 16px;
+      }
+    }
   }
 `;
 

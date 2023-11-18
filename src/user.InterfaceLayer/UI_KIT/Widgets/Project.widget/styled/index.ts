@@ -1,6 +1,10 @@
-import styled from "styled-components";
+import styled, { CSSProperties } from "styled-components";
 import load from "./animations/load";
 import Colors from "../../../../constants/colors";
+
+interface ProjectWidgetPropsStyle {
+  $customStyle?: CSSProperties;
+}
 
 export const Skeleton = styled.div`
   position: relative;
@@ -44,14 +48,14 @@ export const Skeleton = styled.div`
   }
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<ProjectWidgetPropsStyle>`
   position: relative;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   background: ${Colors.BG_WIDGET};
   box-shadow: 0px 10px 40px 0px rgba(181, 194, 194, 0.2);
@@ -59,6 +63,8 @@ export const Container = styled.div`
   border: 1px solid ${Colors.TRANSPARENT};
   overflow: hidden;
   transition: border 0.3s ease;
+  height: 200px;
+  transform: 0;
   & h3,
   & h6 {
     text-overflow: ellipsis;
@@ -71,18 +77,25 @@ export const Container = styled.div`
   & h3 {
     font-weight: 500;
     word-wrap: break-word;
-    max-width: 280px;
   }
 
   &:hover {
     border: 1px solid ${Colors.ORANGE};
   }
   @media (min-width: 1024px) {
-    width: 25%;
+    // width: calc(33.3333% - 62px);
+    width: calc(33.3333% - 88px);
   }
-  @media (min-width: 740px) and (max-width: 1023px) {
-    width: 33.33333%;
+  @media (min-width: 740px) and (max-width: 1081px) {
+    // width: calc(50% - 62px);
+    width: 90%;
   }
+
+  @media (max-width: 740px) {
+    transform: ${(props) =>
+      props.$customStyle ? props.$customStyle.transform : "none !important"};
+  }
+
   & button {
     position: absolute;
     right: 0px;

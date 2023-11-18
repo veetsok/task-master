@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Colors from "../../../constants/colors";
+import fade from "../../ModalAddTodo.component.bll/styled/animation";
 
 export const ModalWrapper = styled.div`
   position: fixed;
@@ -13,12 +14,14 @@ export const ModalWrapper = styled.div`
 export const Container = styled.div`
   max-height: calc(100vh - 48px);
   position: relative;
+  animation: ${fade} 0.3s ease;
   overflow-y: overlay;
   width: calc(100% - 48px);
   background: ${Colors.BG_WIDGET};
   border-radius: 10px;
   padding: 25px;
   width: calc(100% + 17px);
+  margin: 0 20px;
   /* Стили для скроллбара */
   &::-webkit-scrollbar {
     width: 10px; /* ширина полосы прокрутки */

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Colors from "../../../constants/colors";
+import fade from "./animation";
 
 export const ModalWrapper = styled.div`
   position: fixed;
@@ -13,11 +14,12 @@ export const ModalWrapper = styled.div`
 export const Container = styled.div`
   max-height: calc(100vh - 48px);
   position: relative;
-  animation: Modal_fade-down__uPWJY 0.3s ease;
+  animation: ${fade} 0.3s ease;
   width: calc(100% - 48px);
   background: ${Colors.BG_WIDGET};
   border-radius: 10px;
   padding: 25px;
+  margin: 0 20px;
   h2 {
     text-align: center;
   }
@@ -65,7 +67,6 @@ export const Calendar = styled.div`
     border: 2px solid ${Colors.GRAY};
     background: ${Colors.WHITE};
     cursor: pointer;
-    width: 140%;
     &:active,
     &:target,
     &:focus,
@@ -74,6 +75,9 @@ export const Calendar = styled.div`
     &:visited,
     &:focus-visible {
       border: 2px solid ${Colors.ORANGE};
+    }
+    @media (max-width: 550px) {
+      width: 85%;
     }
   }
 `;

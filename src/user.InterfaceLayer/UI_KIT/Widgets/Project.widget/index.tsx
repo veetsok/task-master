@@ -10,7 +10,7 @@ import ImageEnum from "../../Atom/Image/enum";
 import Close from "../../../shared/assets/icons/close.svg?react";
 
 const ProjectWidget: React.FC<ProjectWidgetProps> = (props: ProjectWidgetProps) => {
-  const { title, handleDeleteProject, onClick, description, isLoading } = props;
+  const { title, handleDeleteProject, custom, onClick, description, isLoading } = props;
 
   const handleDeleteClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -24,7 +24,7 @@ const ProjectWidget: React.FC<ProjectWidgetProps> = (props: ProjectWidgetProps) 
       {isLoading ? (
         Array.from({ length: 5 }).map((_, index) => <ST.Skeleton key={index} />)
       ) : (
-        <ST.Container onClick={onClick}>
+        <ST.Container $customStyle={custom} onClick={onClick}>
           <Text type={TextEnum.enum_Text_H3} children={title} />
           <ST.IconBlock>
             <Text type={TextEnum.enum_Text_H6} children={description} />

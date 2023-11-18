@@ -6,6 +6,7 @@ import { TodosPage } from "../Pages/Todos.Page";
 import Loader from "../Components/general.components/Loader";
 import Error from "../Components/general.components/Error";
 import App from "../../App";
+import { Navigate } from "react-router-dom";
 
 const mainRouter = [
   {
@@ -58,7 +59,7 @@ const mainRouter = [
         path: "*",
         element: (
           <Suspense fallback={<Loader />}>
-            <MainPage />
+            <Navigate to="/" replace />
           </Suspense>
         ),
       },

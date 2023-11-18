@@ -29,6 +29,20 @@ export const Profile = styled.div`
   position: relative;
 `;
 
+export const ProfileSvg = styled.div`
+  & div {
+    width: 20px;
+    margin-right: 15px;
+  }
+`;
+
+export const NameText = styled.div`
+  max-width: 320px;
+  @media (max-width: 550px) {
+    max-width: 180px;
+  }
+`;
+
 export const ProfileText = styled.div<NavbarProps>`
   display: flex;
   align-items: center;
@@ -39,15 +53,8 @@ export const ProfileText = styled.div<NavbarProps>`
     color: ${(props) => (props.$isOpen ? `${Colors.ORANGE}` : `${Colors.DEFAULT}`)};
     font-weight: 600;
   }
-  & div {
-    width: 20px;
-    margin-right: 15px;
-    & svg {
-      width: 100%;
-      height: 100%;
-    }
-  }
 `;
+
 
 export const Modal = styled.div<NavbarProps>`
   display: ${(props) => (props.$isOpen ? "block" : "none")};

@@ -16,9 +16,9 @@ const AddProjectWidget: React.FC<AddProjectWidgetProps> = (
 ) => {
   const { onClick } = props;
   return (
-    <ST.Container>
+    <ST.Container onClick={onClick}>
       <ST.ImageBlock>
-        <Image type={ImageEnum.enum_defaultSvg} onClick={onClick} icon={<Plus />} />
+        <Image type={ImageEnum.enum_defaultSvg} icon={<Plus />} />
       </ST.ImageBlock>
       <Text type={TextEnum.enum_Text_H4} children="New project" />
     </ST.Container>

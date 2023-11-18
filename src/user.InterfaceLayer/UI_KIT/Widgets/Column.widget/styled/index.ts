@@ -32,7 +32,18 @@ export const Container = styled.div<Partial<Column>>`
   align-items: flex-start;
   gap: 10px;
   margin: 0 10px;
-  width: 380px;
+  max-width: 380px;
+  width: 100%;
+  @media (max-width: 1080px) {
+    width: 30%;
+  }
+  @media (max-width: 769px) {
+    max-width: 360px;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    width: 50%;
+  }
 `;
 
 export const ColumnBlock = styled.div<Partial<Column>>`

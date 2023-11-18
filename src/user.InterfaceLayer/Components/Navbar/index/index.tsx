@@ -70,8 +70,12 @@ const Navbar: React.FC = () => {
           {user._id ? (
             <ST.Profile>
               <ST.ProfileText $isOpen={isModalOpen} onClick={toggleModal}>
-                <Image type={ImageEnum.enum_defaultSvg} icon={<Profile />} />
-                <Text type={TextEnum.enum_Text_H5} children={user.name} />
+                <ST.ProfileSvg>
+                  <Image type={ImageEnum.enum_defaultSvg} icon={<Profile />} />
+                </ST.ProfileSvg>
+                <ST.NameText>
+                  <Text type={TextEnum.enum_Text_H5} children={user.name} />
+                </ST.NameText>
               </ST.ProfileText>
 
               <ST.Modal $isOpen={isModalOpen} onClick={handleClickOnModal} id="modal">

@@ -7,18 +7,21 @@ export const ImageBlock = styled.div`
   & svg {
     cursor: pointer;
   }
+  @media (max-width: 626px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 export const Container = styled.div`
   display: inline-flex;
-  width: 320px;
-  height: 250px;
+  cursor: pointer;
+  height: 200px;
   padding: 30px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  flex-shrink: 0;
   border: 1px solid ${Colors.TRANSPARENT};
   border-radius: 10px;
   background: ${Colors.BG_WIDGET};
@@ -33,14 +36,28 @@ export const Container = styled.div`
     }
   }
   @media (min-width: 1024px) {
-    width: 25%;
+    // width: calc(33.3333% - 62px);
+    width: calc(33.3333% - 88px);
   }
-  @media (min-width: 740px) and (max-width: 1023px) {
-    width: 33.33333%;
+  @media (min-width: 740px) and (max-width: 1081px) {
+    // width: calc(50% - 62px);
+    width: 90%;
+  }
+
+  @media (max-width: 740px) {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  @media (max-width: 626px) {
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    height: 130px;
+    padding: 30px;
   }
 
   & h4 {
     color: ${Colors.GRAY};
-    margin-top: 20px;
+    margin-top: 10px;
   }
 `;
