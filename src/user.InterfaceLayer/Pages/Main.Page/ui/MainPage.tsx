@@ -54,7 +54,6 @@ const MainPage: React.FC<MainPageProps> = () => {
     dispatch(getProjects());
   }, [dispatch]);
 
-  console.log(projects);
   if (!auth._id) return <Navigate to="/signin" />;
 
   return (
