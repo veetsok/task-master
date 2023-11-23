@@ -1,6 +1,6 @@
 # MasterTask
 
-## Welcome to MasterTask, a Single Page Application (SPA) Todo App that serves as a comprehensive web solution for efficient project and to-do list management. This project is built using the MERN stack (MongoDB, Express, ReactJS, NodeJS) alongside TypeScript, Redux, and Vite, showcasing a powerful and scalable approach to modern web development.
+## Welcome to MasterTask, a Multi-Page  Application (SPA) Todo App that serves as a comprehensive web solution for efficient project and to-do list management. This project is built using the MERN stack (MongoDB, Express, ReactJS, NodeJS) alongside TypeScript, Redux, and Vite, showcasing a powerful and scalable approach to modern web development.
 
 ## Table Of Content
 
